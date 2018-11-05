@@ -15,6 +15,15 @@ One point of interest in that the package.json within the 'client' sub-folder (w
 2. cd into the repo folder
 3. $ npm install   
 
-Now, the code that you need to spin up the server is on your EC2 instance, but it will only work if the production-ready CRA is in place. we get that by going into the 'client' sub-folder (in your CLI within the EC2 instance), and running '$ npm run build'. That will create the CRA code that is needed for the running the MERN app. 
+
+Now, the code that you need to spin up the server is on your EC2 instance, but it will only work if the production-ready CRA is in place. we get that by going into the 'client' sub-folder (in your CLI within the EC2 instance), and running '$ npm run build'. That will create the CRA code that is needed for the running the MERN app. You can see that this build is what is served by the server by the line (on server.js file), line 21:
+
+````
+app.use(express.static(path.join(__dirname, 'client/build')));
+````
+That's why we ran 'npm run build', because it created the 'build' subfolder, and the build/index.html file (chock full of react components that are there making up the client-side react app side of things).
+
+4. $ cd client
+5. $ npm run build
 
 There are fancier ways to do this automatically by creating scripts but, for me, it really only sunk in how this works by keeping it simple and seeing how it worked by manually building it.
