@@ -18,6 +18,7 @@ var data = [
         "text" : "coffee please"
     },
 ]
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/data', (req,res,next) => {
   res.json(data);
