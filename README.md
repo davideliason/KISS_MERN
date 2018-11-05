@@ -8,9 +8,13 @@ This is a simple, barebones app that spins up an Express server (on port 8080), 
 ### Notes
 This is purposefully kept really simple, without bringing in webpack, react-router or redux, etc,  to keep the focus on the bigger picture. Since this repo is used in a tutorial for spinning up an EC2 instance/server on AWS and providing a MERN app, the emphasis is on that, without getting too bogged down on the details of the MERN code itself.
 
+One point of interest in that the package.json within the 'client' sub-folder (which is the CRA app) holds the proxy to the EC2 server port - you can see how it points to port 8080, which is what we set the EC2 instance to (within the tutorial)
+
 ### To Use
 1. clone this repo into your EC2 instance
 2. cd into the repo folder
 3. $ npm install   
 
-Now, the code that you need to spin up the server is on your EC2 instance, but it will only work if the production-ready CRA is in place. we get that by going into the 'client' sub-folder (in your CLI within the EC2 instance), and running '$ npm run build'. That will create the CRA code that is needed for the running the MERN app.
+Now, the code that you need to spin up the server is on your EC2 instance, but it will only work if the production-ready CRA is in place. we get that by going into the 'client' sub-folder (in your CLI within the EC2 instance), and running '$ npm run build'. That will create the CRA code that is needed for the running the MERN app. 
+
+There are fancier ways to do this automatically by creating scripts but, for me, it really only sunk in how this works by keeping it simple and seeing how it worked by manually building it.
