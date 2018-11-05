@@ -1,0 +1,29 @@
+{
+  "name": "kiss_mern",
+  "version": "0.1.0",
+  "description": "very simple MERN app for tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideliason/KISS_MERN.git"
+  },
+  "keywords": [
+    "MERN",
+    "AWS"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davideliason/KISS_MERN/issues"
+  },
+  "homepage": "https://github.com/davideliason/KISS_MERN#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
